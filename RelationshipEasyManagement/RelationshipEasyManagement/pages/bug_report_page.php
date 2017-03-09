@@ -250,7 +250,7 @@ if ($tpl_show_priority) {
 if ($tpl_show_due_date) {
 	$t_date_to_display = '';
 	
-	if (! date_is_null ( $f_due_date )) {
+	if (! date_is_null ( $f_due_date ) && ( 0 != strlen ( $f_due_date ) ) ) {
 		$t_date_to_display = date ( config_get ( 'calendar_date_format' ), $f_due_date );
 	}
 	?>
